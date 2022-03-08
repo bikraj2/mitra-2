@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/calender.jpg</file>
+        <file>icon/home.png</file>
+        <file>icon/maintenance.png</file>
+        <file>icon/music.jpg</file>
+        <file>icon/notes.jpg</file>
+        <file>icon/pomodoro.jpg</file>
+        <file>icon/profile.jpg</file>
+        <file>icon/schedule.jpg</file>
+        <file>icon/1.png</file>
+        <file>icon/logout.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>
