@@ -12,4 +12,7 @@
         <file>icon/logout.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/database">
+        <file>heyy.db</file>
+    </qresource>
 </RCC>

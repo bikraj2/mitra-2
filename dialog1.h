@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include"dialog2.h"
-
+#include "todo.h"
 namespace Ui {
 class Dialog1;
 }
@@ -21,9 +21,12 @@ private slots:
 
     void on_Profile_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::Dialog1 *ui;
      Dialog2 *profilewindow;
+     todo* todo1;
 };
 
 #endif // DIALOG1_H

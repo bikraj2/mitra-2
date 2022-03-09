@@ -19,3 +19,11 @@ void Dialog1::on_Profile_clicked()
     profilewindow->show();
 }
 
+
+void Dialog1::on_pushButton_3_clicked()
+{
+    hide();
+    todo1= new todo(this);
+    todo1->show();
+}
+

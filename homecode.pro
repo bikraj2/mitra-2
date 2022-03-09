@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,17 +12,26 @@ SOURCES += \
     dialog1.cpp \
     dialog2.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    signup.cpp\
+    taskadder.cpp \
+    todo.cpp
 
 HEADERS += \
     dialog1.h \
     dialog2.h \
-    mainwindow.h
+    mainwindow.h \
+    signup.h\
+    taskadder.h \
+    todo.h
 
 FORMS += \
     dialog1.ui \
     dialog2.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    signup.ui\
+    taskadder.ui \
+    todo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
