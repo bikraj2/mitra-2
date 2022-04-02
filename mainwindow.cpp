@@ -72,29 +72,23 @@ void MainWindow::on_pushButton_singup_3_clicked()
 }
 void MainWindow:: db_conn_open()
 {
-    QDir data("C:/Db");
-    if (!data.exists())
-    {
-        data.mkpath("C:/Db");
-    }
-    QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
-    info.setDatabaseName("C:/Db/users_info.db");
-    if(!info.open())
-        ui->name->setText("Failed to connect to the database.");
-    else
-        ui->name->setText("connected to the database successfully");
-    QSqlDatabase main_db;
-    main_db = QSqlDatabase::addDatabase("QSQLITE");
-    //main_db.setDatabaseName("D:/Project/eLedger/main/main.db");//change path for your system
 
-    QString db_path = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("main.db");
-    qDebug() << db_path;
-    main_db.setDatabaseName(db_path);
+    QDir data("C:/Db");
+        if (!data.exists())
+        {
+            data.mkpath("C:/Db");
+        }
+        QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
+        info.setDatabaseName("C:/Db/users_info.db");
+        if(!info.open())
+            ui->name->setText("Failed to connect to the database.");
+        else
+            ui->name->setText("connected to the database successfully");
 }
 bool MainWindow :: setTable()
 {
     QSqlQuery table1;
-    QString qry="Create Table usersa"
+    QString qry="Create Table new"
             "("
                 "first_name varchar(50),"
                 "last_name varchar(50),"
