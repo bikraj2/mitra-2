@@ -20,8 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     {
         ui->label3->setText("Not created ");
     }
-    QDir x;
-    ui->label3->setText(x.currentPath());
+
 
 }
 
@@ -84,6 +83,13 @@ void MainWindow:: db_conn_open()
         ui->name->setText("Failed to connect to the database.");
     else
         ui->name->setText("connected to the database successfully");
+    QSqlDatabase main_db;
+    main_db = QSqlDatabase::addDatabase("QSQLITE");
+    //main_db.setDatabaseName("D:/Project/eLedger/main/main.db");//change path for your system
+
+    QString db_path = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("main.db");
+    qDebug() << db_path;
+    main_db.setDatabaseName(db_path);
 }
 bool MainWindow :: setTable()
 {
