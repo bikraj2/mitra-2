@@ -4,18 +4,25 @@
 #include<QPixmap>
 #include<QtSql>
 #include<QFileInfo>
+#include<QtDebug>
+#include<iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
-    info.setDatabaseName("C:/Users/bikraj/heyy.db");
-    if(!info.open())
-        ui->name->setText("Failed to connect to the database.");
+
+    db_conn_open();
+    if (setTable())
+        ui->label3->setText("Table Created");
     else
-        ui->name->setText("connected to the database successfully");
+    {
+        ui->label3->setText("Not created ");
+    }
+    QDir x;
+    ui->label3->setText(x.currentPath());
+
 }
 
 MainWindow::~MainWindow()
@@ -64,4 +71,33 @@ void MainWindow::on_pushButton_singup_3_clicked()
     register1 =  new signup(this);
     register1->show();
 }
+void MainWindow:: db_conn_open()
+{
+    QDir data("C:/Db");
+    if (!data.exists())
+    {
+        data.mkpath("C:/Db");
+    }
+    QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
+    info.setDatabaseName("C:/Db/users_info.db");
+    if(!info.open())
+        ui->name->setText("Failed to connect to the database.");
+    else
+        ui->name->setText("connected to the database successfully");
+}
+bool MainWindow :: setTable()
+{
+    QSqlQuery table1;
+    QString qry="Create Table usersa"
+            "("
+                "first_name varchar(50),"
+                "last_name varchar(50),"
+                "username varchar(50),"
+               " password1 varchar(50),"
+                "email varchar(100)"
+            ");";
+    if (table1.exec(qry))
+        return true;
+    return false;
 
+}

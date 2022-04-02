@@ -26,14 +26,7 @@ void signup::on_pushButton_clicked()
     username=ui->lineEdit_5->text();
     password=ui->lineEdit_6->text();
     QSqlQuery qry;
-    qry.exec("Insert into usera(first_name,last_name,Age,email,user_name,password) values(?,?,?,?,?,?)");
-
-    qry.addBindValue(first_name);
-    qry.addBindValue(last_name);
-    qry.addBindValue(age);
-    qry.addBindValue(email);
-    qry.addBindValue(username);
-    qry.addBindValue(password);
+    qry.exec("Insert into usersa(first_name,last_name,username,password1,email) values('"+first_name+"','"+last_name+"','"+username+"','"+password+"','"+email+"')");
     if(qry.exec())
     {
 

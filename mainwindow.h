@@ -23,6 +23,8 @@ private slots:
     void on_pushButton_login_3_clicked();
 
     void on_pushButton_singup_3_clicked();
+    void  db_conn_open();
+    bool setTable();
 
 private:
     Ui::MainWindow *ui;
