@@ -7,6 +7,7 @@
 #include<QtDebug>
 #include<iostream>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -21,7 +22,9 @@ MainWindow::MainWindow(QWidget *parent)
         ui->label3->setText("Not created ");
     }
 
-
+    QString x="RajanKabita1";
+    encrypt(x);
+    qDebug()<< x;
 }
 
 MainWindow::~MainWindow()
@@ -35,9 +38,9 @@ void MainWindow::on_pushButton_login_3_clicked()
 {
     QString username = ui->username_3->text();
     QString password = ui->Password_3->text();
-    ui->label3->setText(username+password);
+    encrypt(password);
     QSqlQuery qry;
-    if(qry.exec("Select * from usera where user_name= '"+username+"' and password= '"+password+"'"))
+    if(qry.exec("Select * from newer where username= '"+username+"' and password1= '"+password+"'"))
     {
         ui->label3->setText("hey bro here i am");
         int count =0;
@@ -60,10 +63,7 @@ void MainWindow::on_pushButton_login_3_clicked()
     {
         QMessageBox:: warning(this,"hey",qry.lastError().text());
     }
-
 }
-
-
 void MainWindow::on_pushButton_singup_3_clicked()
 {
     hide();
@@ -88,16 +88,45 @@ void MainWindow:: db_conn_open()
 bool MainWindow :: setTable()
 {
     QSqlQuery table1;
-    QString qry="Create Table new"
+    QString qry="Create Table newer"
             "("
                 "first_name varchar(50),"
                 "last_name varchar(50),"
                 "username varchar(50),"
                " password1 varchar(50),"
-                "email varchar(100)"
+                "email varchar(100),"
+            "DOB date"
             ");";
     if (table1.exec(qry))
         return true;
     return false;
+}
+void MainWindow::encrypt(QString &string_encrypt){
 
+    QString p_text = string_encrypt;
+    int k=598658, value,ascii;
+    qDebug()<<k;
+    for (int i = 0; i < p_text.size(); i++)
+    {
+        ascii = (p_text[i]).QChar::unicode();
+        if (ascii >= 48 && ascii <= 57)
+        {
+            value = ((ascii + k - 48) % 10 + 48);
+            string_encrypt[i] = static_cast<char>(value);
+        }
+        else if (ascii >= 65 && ascii <= 90)
+        {
+            value = ((ascii + k - 65) % 26 + 65);
+            string_encrypt[i] = static_cast<char>(value);
+        }
+        else if (ascii >= 97 && ascii <= 122)
+        {
+            value = ((ascii + k - 97) % 26 + 97);
+            string_encrypt[i] = static_cast<char>(value);
+        }
+        else
+        {
+            string_encrypt[i] = static_cast<char>(ascii);
+        }
+    }
 }

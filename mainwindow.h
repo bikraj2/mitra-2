@@ -25,6 +25,7 @@ private slots:
     void on_pushButton_singup_3_clicked();
     void  db_conn_open();
     bool setTable();
+    void encrypt(QString &string_encrypt);
 
 private:
     Ui::MainWindow *ui;

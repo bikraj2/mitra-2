@@ -2,7 +2,6 @@
 #define SIGNUP_H
 
 #include <QDialog>
-
 namespace Ui {
 class signup;
 }
@@ -17,9 +16,13 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void encrypt(QString &string_encrypt);
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::signup *ui;
+
 };
 
 #endif // SIGNUP_H

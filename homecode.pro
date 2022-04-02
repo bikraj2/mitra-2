@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     dialog1.cpp \
     dialog2.cpp \
+    forgotpassword.cpp \
     main.cpp \
     mainwindow.cpp \
     signup.cpp\
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     dialog1.h \
     dialog2.h \
+    forgotpassword.h \
     mainwindow.h \
     signup.h\
     taskadder.h \
@@ -28,6 +30,7 @@ HEADERS += \
 FORMS += \
     dialog1.ui \
     dialog2.ui \
+    forgotpassword.ui \
     mainwindow.ui \
     signup.ui\
     taskadder.ui \
