@@ -13,6 +13,16 @@
         <file>icon/MITRA.png</file>
         <file>icon/Backgroundlogin.jpg</file>
         <file>icon/arrow-left-solid.png</file>
+        <file>icon/add-file.png</file>
+        <file>icon/copy.png</file>
+        <file>icon/cut.png</file>
+        <file>icon/diskette.png</file>
+        <file>icon/documents.png</file>
+        <file>icon/folder (1).png</file>
+        <file>icon/folder.png</file>
+        <file>icon/paste.png</file>
+        <file>icon/redo.png</file>
+        <file>icon/arrow.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
     <qresource prefix="/database">
