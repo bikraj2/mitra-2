@@ -4,6 +4,7 @@
 #include <QDialog>
 #include"dialog2.h"
 #include "todo.h"
+#include"notes.h"
 namespace Ui {
 class Dialog1;
 }
@@ -25,10 +26,13 @@ private slots:
 
     void on_logouticon_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Dialog1 *ui;
      Dialog2 *profilewindow;
      todo* todo1;
+     notes * noteMaking;
 };
 
 #endif // DIALOG1_H
