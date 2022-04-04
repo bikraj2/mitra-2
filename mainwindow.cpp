@@ -62,13 +62,13 @@ void MainWindow::on_pushButton_singup_3_clicked()
 void MainWindow:: db_conn_open()
 {
 
-    QDir data("C:/Db");
+    QDir data("/Users");
         if (!data.exists())
         {
-            data.mkpath("C:/Db");
+            data.mkpath("/Users/DB");
         }
         QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
-        info.setDatabaseName("/users/priyanshu/projectt/mitra-2/users.db");
+        info.setDatabaseName("/Users/bibhushansaakha/Desktop/mitra-main/mitra-2/users.db");
         info.open();
 }
 bool MainWindow :: setTable()
