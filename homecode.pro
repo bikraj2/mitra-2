@@ -14,7 +14,6 @@ SOURCES += \
     forgotpassword.cpp \
     main.cpp \
     mainwindow.cpp \
-    notes.cpp \
     signup.cpp\
     taskadder.cpp \
     todo.cpp
@@ -24,7 +23,6 @@ HEADERS += \
     dialog2.h \
     forgotpassword.h \
     mainwindow.h \
-    notes.h \
     signup.h\
     taskadder.h \
     todo.h
@@ -34,7 +32,6 @@ FORMS += \
     dialog2.ui \
     forgotpassword.ui \
     mainwindow.ui \
-    notes.ui \
     signup.ui\
     taskadder.ui \
     todo.ui
