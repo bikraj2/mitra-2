@@ -79,7 +79,7 @@ void MainWindow:: db_conn_open()
             data.mkpath("C:/Db");
         }
         QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
-        info.setDatabaseName("C:/Db/users_info.db");
+        info.setDatabaseName("/users/priyanshu/projectt/mitra-2/users.db");
         if(!info.open())
             ui->name->setText("Failed to connect to the database.");
         else
