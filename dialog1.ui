@@ -20,7 +20,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(217, 223, 230)</string>
+   <string notr="true">background-color:rgb(86, 16, 33);</string>
   </property>
   <widget class="QPushButton" name="Profile">
    <property name="geometry">
@@ -79,7 +79,7 @@ QPushButton:pressed {
     </sizepolicy>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(215, 200, 253);
+    <string notr="true">background-color:rgb(227, 226, 223);
 border-radius: 50px;
 </string>
    </property>
@@ -103,7 +103,7 @@ border-radius: 50px;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(9, 9, 9);</string>
+    <string notr="true">color:rgb(255,255,255);</string>
    </property>
    <property name="text">
     <string>Priyanshu</string>
@@ -125,8 +125,7 @@ border-radius: 50px;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(9, 9, 9);
-border-radius:30px;</string>
+    <string notr="true">color:rgb(255,255,255);border-radius:30px;</string>
    </property>
    <property name="text">
     <string>Home</string>
@@ -142,7 +141,9 @@ border-radius:30px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icon/icon/home.png);</string>
+    <string notr="true">image: url(:/icon/icon/home.png);
+background-color:rgb(227, 226, 223);
+</string>
    </property>
    <property name="text">
     <string/>
@@ -158,7 +159,10 @@ border-radius:30px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icon/icon/maintenance.png);</string>
+    <string notr="true">image: url(:/icon/icon/maintenance.png);
+background-color:rgb(227, 226, 223);
+
+</string>
    </property>
    <property name="text">
     <string/>
@@ -180,7 +184,7 @@ border-radius:30px;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(9, 9, 9);
+    <string notr="true">color:rgb(255,255,255);
 border-radius:30px;</string>
    </property>
    <property name="text">
@@ -198,8 +202,7 @@ border-radius:30px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 30px;
-
-background-color:rgb(215, 200, 253);
+background-color:rgb(227, 226, 223);
 image: url(:/icon/icon/pomodoro.jpg);
 image-border-radius: 80px;
 </string>
@@ -221,7 +224,8 @@ image-border-radius: 80px;
     <string notr="true">image: url(:/icon/icon/notes.jpg);
 border-radius: 30px;
 
-background-color:rgb(215, 200, 253);</string>
+background-color:rgb(227, 226, 223);
+</string>
    </property>
    <property name="text">
     <string/>
@@ -239,7 +243,7 @@ background-color:rgb(215, 200, 253);</string>
    <property name="styleSheet">
     <string notr="true">border-radius: 30px;
 
-background-color:rgb(215, 200, 253);
+background-color:rgb(227, 226, 223);
 image: url(:/icon/icon/music.jpg);</string>
    </property>
    <property name="text">
@@ -259,7 +263,7 @@ image: url(:/icon/icon/music.jpg);</string>
     <string notr="true">image: url(:/icon/icon/schedule.jpg);
 border-radius: 30px;
 
-background-color:rgb(215, 200, 253);
+background-color:rgb(227, 226, 223);
 </string>
    </property>
    <property name="text">
@@ -294,7 +298,7 @@ background-color:rgb(215, 200, 253);
    <property name="styleSheet">
     <string notr="true">color:rgb(2, 2, 2);
 font: 700 13pt &quot;Palatino&quot;;
-background:rgb(212, 194, 255);
+background:rgb(255,255,255);
 </string>
    </property>
    <property name="text">
@@ -312,7 +316,9 @@ background:rgb(212, 194, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">color:rgb(2, 2, 2);
-font: 700 13pt &quot;Palatino&quot;;</string>
+font: 700 13pt &quot;Palatino&quot;;
+background:rgb(255,255,255);
+</string>
    </property>
    <property name="text">
     <string>Notes</string>
@@ -329,7 +335,9 @@ font: 700 13pt &quot;Palatino&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color:rgb(2, 2, 2);
-font: 700 13pt &quot;Palatino&quot;;</string>
+font: 700 13pt &quot;Palatino&quot;;
+background:rgb(255,255,255);
+</string>
    </property>
    <property name="text">
     <string>Schedule</string>
@@ -346,7 +354,10 @@ font: 700 13pt &quot;Palatino&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color:rgb(2, 2, 2);
-font: 700 13pt &quot;Palatino&quot;;</string>
+font: 700 13pt &quot;Palatino&quot;;
+background:rgb(255,255,255);
+
+</string>
    </property>
    <property name="text">
     <string>Music</string>
@@ -364,6 +375,7 @@ font: 700 13pt &quot;Palatino&quot;;</string>
    <property name="styleSheet">
     <string notr="true">COLOR:rgb(4, 4, 4);
 font: 700 20pt &quot;Palatino&quot;;
+background:rgb(227, 226, 223);
 </string>
    </property>
    <property name="text">
@@ -399,16 +411,17 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>0</y>
-     <width>131</width>
-     <height>121</height>
+     <x>210</x>
+     <y>10</y>
+     <width>181</width>
+     <height>171</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/icon/icon/1.png);
-background-color:rgb(215, 200, 253);
-border-radius:30px;</string>
+    <string notr="true">image: url(:/icon/icon/MITRA.png);
+background-color:rgb(227, 226, 223);
+border-radius:30px;
+</string>
    </property>
    <property name="text">
     <string/>
@@ -424,7 +437,9 @@ border-radius:30px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image:url(:/icon/icon/logout.png);</string>
+    <string notr="true">image:url(:/icon/icon/logout.png);
+background-color:rgb(227, 226, 223);
+</string>
    </property>
    <property name="text">
     <string/>
@@ -440,7 +455,7 @@ border-radius:30px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(9, 9, 9);
+    <string notr="true">color:rgb(255,255,255);
 font: 700 13pt &quot;Palatino&quot;;
 border-radius:30px;</string>
    </property>

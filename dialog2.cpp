@@ -12,3 +12,12 @@ Dialog2::~Dialog2()
 {
     delete ui;
 }
+
+void Dialog2::on_pushButton_2_clicked()
+{
+
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}
+

@@ -15,16 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     db_conn_open();
-    if (setTable())
-        ui->label3->setText("Table Created");
-    else
-    {
-        ui->label3->setText("Not created ");
-    }
-
-    QString x="RajanKabita1";
-    encrypt(x);
-    qDebug()<< x;
 }
 
 MainWindow::~MainWindow()
@@ -42,7 +32,6 @@ void MainWindow::on_pushButton_login_3_clicked()
     QSqlQuery qry;
     if(qry.exec("Select * from newer where username= '"+username+"' and password1= '"+password+"'"))
     {
-        ui->label3->setText("hey bro here i am");
         int count =0;
         while(qry.next())
         {
@@ -80,10 +69,7 @@ void MainWindow:: db_conn_open()
         }
         QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
         info.setDatabaseName("/users/priyanshu/projectt/mitra-2/users.db");
-        if(!info.open())
-            ui->name->setText("Failed to connect to the database.");
-        else
-            ui->name->setText("connected to the database successfully");
+        info.open();
 }
 bool MainWindow :: setTable()
 {
@@ -105,7 +91,6 @@ void MainWindow::encrypt(QString &string_encrypt){
 
     QString p_text = string_encrypt;
     int k=598658, value,ascii;
-    qDebug()<<k;
     for (int i = 0; i < p_text.size(); i++)
     {
         ascii = (p_text[i]).QChar::unicode();
@@ -130,3 +115,11 @@ void MainWindow::encrypt(QString &string_encrypt){
         }
     }
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    hide();
+    password1=new ForgotPassword(this);
+    password1->show();
+}
+

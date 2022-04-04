@@ -27,3 +27,11 @@ void Dialog1::on_pushButton_3_clicked()
     todo1->show();
 }
 
+
+void Dialog1::on_logouticon_clicked()
+{
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}
+

@@ -6,41 +6,43 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1080</width>
-    <height>1920</height>
+    <width>786</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 0);</string>
+   <string notr="true">background-color: rgb(227, 226, 223);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>530</y>
-      <width>398</width>
-      <height>42</height>
+      <x>240</x>
+      <y>460</y>
+      <width>361</width>
+      <height>31</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <widget class="QLabel" name="name_7">
        <property name="styleSheet">
-        <string notr="true">color:rgb(249, 97, 103);</string>
+        <string notr="true">color:rgb(156, 10, 86)</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color: #F96167&quot;&gt;Don't have an account?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color: #111&quot;&gt;Don't have an account?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_singup_3">
        <property name="styleSheet">
-        <string notr="true">color: #F96167;</string>
+        <string notr="true">color: rgb(0, 0, 0);
+background-color:rgb(227, 226, 223);
+</string>
        </property>
        <property name="text">
         <string>SignUp</string>
@@ -52,10 +54,10 @@
    <widget class="QLabel" name="label3">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>60</y>
-      <width>281</width>
-      <height>81</height>
+      <x>340</x>
+      <y>40</y>
+      <width>251</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -78,24 +80,25 @@
    <widget class="QLabel" name="name_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>70</y>
-      <width>251</width>
-      <height>91</height>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(252, 231, 125);</string>
+     <string notr="true">image:url(:/icon/icon/MITRA.png);
+color:rgb(252, 231, 125);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700; color:#f96167;&quot;&gt;MITRA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>160</y>
+      <x>200</x>
+      <y>100</y>
       <width>411</width>
       <height>351</height>
      </rect>
@@ -103,10 +106,11 @@
     <property name="styleSheet">
      <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
 font: 16pt &quot;Gill Sans MT&quot;;
-color:rgb(249, 97, 103);</string>
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255);</string>
     </property>
     <property name="title">
-     <string>SIGN IN</string>
+     <string>SignIn</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
@@ -154,14 +158,27 @@ color:rgb(249, 97, 103);</string>
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>610</y>
+      <width>191</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Forgot Password?</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1080</width>
-     <height>25</height>
+     <width>786</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

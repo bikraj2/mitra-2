@@ -44,7 +44,7 @@ void signup::encrypt(QString &string_encrypt)
 
     QString p_text = string_encrypt;
     int k=598658, value,ascii;
-    qDebug()<<k;
+
     for (int i = 0; i < p_text.size(); i++)
     {
         ascii = (p_text[i]).QChar::unicode();
@@ -75,8 +75,6 @@ void signup::encrypt(QString &string_encrypt)
 void signup::on_pushButton_2_clicked()
 {
     this->hide();
-
-    // Show the MainWindow (i.e. the parent window)
     QWidget *parent = this->parentWidget();
     parent->show();
 }

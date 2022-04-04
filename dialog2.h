@@ -16,6 +16,9 @@ public:
     explicit Dialog2(QWidget *parent = nullptr);
     ~Dialog2();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Dialog2 *ui;
 

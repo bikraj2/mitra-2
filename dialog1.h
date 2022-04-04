@@ -23,6 +23,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_logouticon_clicked();
+
 private:
     Ui::Dialog1 *ui;
      Dialog2 *profilewindow;

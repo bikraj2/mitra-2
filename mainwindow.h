@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include"dialog1.h"
 #include "signup.h"
+#include "forgotpassword.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -27,10 +28,12 @@ private slots:
     bool setTable();
     void encrypt(QString &string_encrypt);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     Dialog1 *firstwindow;
     signup * register1;
-
+    ForgotPassword * password1;
 };
 #endif // MAINWINDOW_H

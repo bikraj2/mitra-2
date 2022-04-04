@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(223, 204, 250)</string>
+   <string notr="true">
+background-color:rgb(227, 226, 223);</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -28,7 +29,9 @@
    <property name="styleSheet">
     <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
 font: 14pt &quot;Britannic Bold&quot;;
-color:rgb(255, 255, 255)</string>
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255)
+</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -152,14 +155,17 @@ color:rgb(255, 255, 255)</string>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>20</y>
+     <x>10</x>
+     <y>10</y>
      <width>83</width>
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">image:url(:/icon/icon/arrow-left-solid.png)</string>
+   </property>
    <property name="text">
-    <string>BAck</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
