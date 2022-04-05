@@ -18,17 +18,16 @@ signup::~signup()
 
 void signup::on_pushButton_clicked()
 {
-    QString first_name,last_name,email,username,password,date;
-    first_name=ui->lineEdit->text();
-    last_name=ui->lineEdit_2->text();
-    email=ui->lineEdit_3->text();
+    QString full_name,nickname,email,username,password,date;
+    full_name=ui->lineEdit->text();
+    nickname=ui->lineEdit_2->text();
     username=ui->lineEdit_5->text();
     password=(ui->lineEdit_6->text());
     date = ui->lineEdit_4->text();
 
     encrypt(password);
     QSqlQuery qry;
-    qry.exec("Insert into newer(first_name,last_name,username,password1,email,DOB) values('"+first_name+"','"+last_name+"','"+username+"','"+password+"','"+email+"','"+date+"')");
+    qry.exec("Insert into HI (full_name,nickname,username,password1,DOB) values('"+full_name+"','"+nickname+"','"+username+"','"+password+"','"+date+"')");
     if(qry.exec())
     {
 

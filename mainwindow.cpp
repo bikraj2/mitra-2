@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     db_conn_open();
+
+    setTable();
+
 }
 
 MainWindow::~MainWindow()
@@ -30,7 +33,7 @@ void MainWindow::on_pushButton_login_3_clicked()
     QString password = ui->Password_3->text();
     encrypt(password);
     QSqlQuery qry;
-    if(qry.exec("Select * from newer where username= '"+username+"' and password1= '"+password+"'"))
+    if(qry.exec("Select * from HI where username= '"+username+"' and password1= '"+password+"'"))
     {
         int count =0;
         while(qry.next())
@@ -68,20 +71,24 @@ void MainWindow:: db_conn_open()
             data.mkpath("C:/Db");
         }
         QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
-        info.setDatabaseName("/users/priyanshu/projectt/mitra-2/users.db");
+        info.setDatabaseName("C:/Db/users.db");
         info.open();
+        if(!info.open())
+        {
+            qDebug() << "hey sorry";
+        }
+
 }
 bool MainWindow :: setTable()
 {
     QSqlQuery table1;
-    QString qry="Create Table newer"
+    QString qry="Create Table HI"
             "("
-                "first_name varchar(50),"
-                "last_name varchar(50),"
+                "full_name varchar(50),"
+                "nickname varchar(50),"
                 "username varchar(50),"
-               " password1 varchar(50),"
-                "email varchar(100),"
-            "DOB date"
+                "password1 varchar(50),"
+                "DOB date"
             ");";
     if (table1.exec(qry))
         return true;
