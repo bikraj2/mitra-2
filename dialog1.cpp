@@ -35,3 +35,11 @@ void Dialog1::on_logouticon_clicked()
     parent->show();
 }
 
+
+void Dialog1::on_pushButton_2_clicked()
+{
+    hide();
+    noteMaking = new notes(this);
+    noteMaking->show();
+}
+

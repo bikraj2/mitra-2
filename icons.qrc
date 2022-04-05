@@ -23,6 +23,7 @@
         <file>icon/paste.png</file>
         <file>icon/redo.png</file>
         <file>icon/arrow.png</file>
+        <file>icon/info.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
     <qresource prefix="/database">
