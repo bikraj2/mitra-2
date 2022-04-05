@@ -1,6 +1,8 @@
 #include "forgotpassword.h"
 #include "ui_forgotpassword.h"
-
+#include<QtSql>
+#include<QMessageBox>
+QString  username2,DOB,nickname;
 ForgotPassword::ForgotPassword(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ForgotPassword)
@@ -16,9 +18,30 @@ ForgotPassword::~ForgotPassword()
 
 void ForgotPassword::on_pushButton_clicked()
 {
-    QString username2,DOB,nickname;
+
+
     username2=ui->username3->text();
-    qDebug() << username2;
-    qDebug() <<"hey you";
+    DOB=ui->DOB->text();
+    nickname=ui->Nickname->text();
+    QSqlQuery forgot;
+    QString qry="Select * from  HI where username='"+username2+"'and DOB ='"+DOB+"' and nickname='"+nickname+"'";
+    if (forgot.exec(qry))
+    {
+        int loop=1;
+        while (forgot.next())
+        {
+            loop+=1;
+        }
+        if (loop==1)
+        {
+           hide();
+           chng= new change_password(this);
+           chng->show();
+        }
+    }
+    else
+    {
+        QMessageBox:: warning(this,"Incorrect Credentials",forgot.lastError().text());
+    }
 }
 

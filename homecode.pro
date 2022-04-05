@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    change_password.cpp \
     dialog1.cpp \
     dialog2.cpp \
     forgotpassword.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     todo.cpp
 
 HEADERS += \
+    change_password.h \
     dialog1.h \
     dialog2.h \
     forgotpassword.h \
@@ -30,6 +32,7 @@ HEADERS += \
     todo.h
 
 FORMS += \
+    change_password.ui \
     dialog1.ui \
     dialog2.ui \
     forgotpassword.ui \

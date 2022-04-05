@@ -1,6 +1,6 @@
 #ifndef FORGOTPASSWORD_H
 #define FORGOTPASSWORD_H
-
+#include"change_password.h"
 #include <QDialog>
 
 namespace Ui {
@@ -20,6 +20,7 @@ private slots:
 
 private:
     Ui::ForgotPassword *ui;
+    change_password * chng;
 };
 
 #endif // FORGOTPASSWORD_H

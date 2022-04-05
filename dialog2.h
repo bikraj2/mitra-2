@@ -21,7 +21,6 @@ private slots:
 
 private:
     Ui::Dialog2 *ui;
-
 };
 
 #endif // DIALOG2_H
