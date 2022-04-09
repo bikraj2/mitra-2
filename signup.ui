@@ -33,7 +33,7 @@ background-color:rgb(227, 226, 223);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -43,14 +43,27 @@ background-color:rgb(227, 226, 223);</string>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QGroupBox" name="groupBox">
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton">
       <property name="styleSheet">
        <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
 font: 14pt &quot;Britannic Bold&quot;;
 background-color:rgb(86, 16, 33);
 color:rgb(255, 255, 255)
 </string>
+      </property>
+      <property name="text">
+       <string>Sign UP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
+font: 14pt &quot;Britannic Bold&quot;;
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255);</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -77,22 +90,6 @@ color:rgb(255, 255, 255)
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Preferred</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>50</width>
-             <height>17</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
           <widget class="QLineEdit" name="lineEdit_4"/>
          </item>
         </layout>
@@ -105,22 +102,6 @@ color:rgb(255, 255, 255)
             <string>UserName</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Preferred</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>50</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
          </item>
          <item>
           <widget class="QLineEdit" name="lineEdit_5"/>
@@ -137,7 +118,11 @@ color:rgb(255, 255, 255)
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -212,20 +197,6 @@ color:rgb(255, 255, 255)
         </layout>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="pushButton">
-      <property name="styleSheet">
-       <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
-font: 14pt &quot;Britannic Bold&quot;;
-background-color:rgb(86, 16, 33);
-color:rgb(255, 255, 255)
-</string>
-      </property>
-      <property name="text">
-       <string>Sign UP</string>
-      </property>
      </widget>
     </item>
    </layout>

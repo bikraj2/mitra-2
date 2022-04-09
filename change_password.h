@@ -15,7 +15,7 @@ public:
     ~change_password();
 
 private slots:
-    void on_pushButton_clicked();
+    bool on_pushButton_clicked();
     void encrypt(QString &string_encrypt);
 private:
     Ui::change_password *ui;

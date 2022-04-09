@@ -20,7 +20,7 @@ public:
 private slots:
 
 
-
+    void db_conn_close();
     void on_pushButton_login_3_clicked();
 
     void on_pushButton_singup_3_clicked();

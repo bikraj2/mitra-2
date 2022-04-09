@@ -22,15 +22,18 @@
      <rect>
       <x>240</x>
       <y>460</y>
-      <width>361</width>
-      <height>31</height>
+      <width>412</width>
+      <height>48</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <widget class="QLabel" name="name_7">
        <property name="styleSheet">
-        <string notr="true">color:rgb(156, 10, 86)</string>
+        <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
+font: 16pt &quot;Gill Sans MT&quot;;
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color: #111&quot;&gt;Don't have an account?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -40,9 +43,10 @@
      <item>
       <widget class="QPushButton" name="pushButton_singup_3">
        <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);
-background-color:rgb(227, 226, 223);
-</string>
+        <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
+font: 14pt &quot;Britannic Bold&quot;;
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>SignUp</string>
@@ -50,19 +54,6 @@ background-color:rgb(227, 226, 223);
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QLabel" name="label3">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>40</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
    </widget>
    <widget class="QLabel" name="name">
     <property name="geometry">
@@ -151,6 +142,9 @@ color:rgb(255, 255, 255);</string>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_login_3">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="text">
         <string>Login</string>
        </property>
@@ -163,9 +157,15 @@ color:rgb(255, 255, 255);</string>
      <rect>
       <x>310</x>
       <y>610</y>
-      <width>191</width>
-      <height>24</height>
+      <width>201</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid gray;border-radius:5px;margin-top: 1ex;
+font: 14pt &quot;Britannic Bold&quot;;
+background-color:rgb(86, 16, 33);
+color:rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Forgot Password?</string>
@@ -178,7 +178,7 @@ color:rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>786</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

@@ -27,21 +27,30 @@ void ForgotPassword::on_pushButton_clicked()
     QString qry="Select * from  HI where username='"+username2+"'and DOB ='"+DOB+"' and nickname='"+nickname+"'";
     if (forgot.exec(qry))
     {
-        int loop=1;
+        int loop=0;
         while (forgot.next())
         {
             loop+=1;
         }
-        if (loop==1)
+        if (loop>=1)
         {
            hide();
            chng= new change_password(this);
            chng->show();
         }
+        else
+        {
+              QMessageBox:: warning(this,"Incorrect Credentials","The details you entered donot match.");
+        }
     }
-    else
-    {
-        QMessageBox:: warning(this,"Incorrect Credentials",forgot.lastError().text());
-    }
+
+}
+
+
+void ForgotPassword::on_pushButton_2_clicked()
+{
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
 }
 

@@ -7,6 +7,7 @@ change_password::change_password(QWidget *parent) :
     ui(new Ui::change_password)
 {
     ui->setupUi(this);
+    ui->mesage->setText("");
 }
 
 change_password::~change_password()
@@ -14,25 +15,45 @@ change_password::~change_password()
     delete ui;
 }
 
-void change_password::on_pushButton_clicked()
+bool change_password::on_pushButton_clicked()
 {
+
     extern QString  username2,DOB,nickname;
     QString new_p,confirm_p;
     new_p=ui->new_p->text();
     confirm_p=ui->confirm_p->text();
-    encrypt(new_p);
-    QSqlQuery change;
-    QString qry= "Update hi set password1 ='"+new_p+"' where username= '"+username2+"'";
-    if (change.exec(qry))
+    QRegularExpression password_pattern("^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&-+=()])(?=\\S+$).*$");
+    QRegularExpressionMatch password_is_valid = password_pattern.match(new_p);
+
+    if(new_p!=confirm_p)
     {
-        QMessageBox::information(this,"Done","Your password is changed successfully");
-        this->hide();
-        QWidget *parent = this->parentWidget();
-        parent->show();
+        ui->mesage->setText("The passwords donot match");
+        ui->new_p->setText("");
+        ui->confirm_p->setText("");
+        return 0;
+    }
+
+    if(password_is_valid.hasMatch())
+    {
+        encrypt(new_p);
+        QSqlQuery change;
+
+        QString qry= "Update hi set password1 ='"+new_p+"' where username= '"+username2+"'";
+        if (change.exec(qry))
+        {
+            QMessageBox::information(this,"Done","Your password is changed successfully");
+            this->hide();
+            QWidget *parent = this->parentWidget();
+            parent->show();
+        }
+        else
+        {
+             QMessageBox::information(this,"Done",change.lastError().text());
+        }
     }
     else
     {
-         QMessageBox::information(this,"Done",change.lastError().text());
+        QMessageBox::warning(this,"Invalid Password","Your password must: \n include a letter,symbol and a number\n be at least 8 character long");
     }
 }
 void change_password :: encrypt(QString &string_encrypt)

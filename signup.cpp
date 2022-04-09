@@ -16,7 +16,7 @@ signup::~signup()
     delete ui;
 }
 
-void signup::on_pushButton_clicked()
+bool signup::on_pushButton_clicked()
 {
     QString full_name,nickname,email,username,password,date;
     full_name=ui->lineEdit->text();
@@ -24,19 +24,53 @@ void signup::on_pushButton_clicked()
     username=ui->lineEdit_5->text();
     password=(ui->lineEdit_6->text());
     date = ui->lineEdit_4->text();
-
-    encrypt(password);
-    QSqlQuery qry;
-    qry.exec("Insert into HI (full_name,nickname,username,password1,DOB) values('"+full_name+"','"+nickname+"','"+username+"','"+password+"','"+date+"')");
-    if(qry.exec())
+    if(full_name=="" || nickname ==""||username==""||password==""||date=="")
     {
+        QMessageBox::warning(this,"Incomplete information","Make sure you have entered all the fields.");
+        return 0;
+    }
+    QRegularExpression username_pattern("^[a-zA-Z0-9_-]{5,10}$");//only includes alphabets or digits or underscore or hyphen; 5 to 10 characters
+    QRegularExpressionMatch username_is_valid = username_pattern.match(username);
 
-        QMessageBox::warning(this,"thiis it","data added");
-    }
-    else
+    QRegularExpression password_pattern("^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&-+=()])(?=\\S+$).*$");
+    QRegularExpressionMatch password_is_valid = password_pattern.match(password);
+    if(password_is_valid.hasMatch()&&username_is_valid.hasMatch())
     {
-        QMessageBox::warning(this,"thiis it",qry.lastError().text());
+        QSqlQuery qry1;
+        if(qry1.exec("Select * from HI where username='"+username+"'"))
+        {
+            int loop=0;
+            while (qry1.next())
+            {
+                loop+=1;
+
+            }
+          if(loop>=1)
+            {
+                QMessageBox::warning(this,"User already registered!","Please try a different username.");
+                return 0;
+            }
+        }
+        encrypt(password);
+        QSqlQuery qry;
+        qry.exec("Insert into HI (full_name,nickname,username,password1,DOB) values('"+full_name+"','"+nickname+"','"+username+"','"+password+"','"+date+"')");
+        if(qry.exec())
+        {
+
+            QMessageBox::information(this,"User Registered","You have been registered.");
+            this->hide();
+            QWidget *parent = this->parentWidget();
+            parent->show();
+        }
     }
+    else{
+    if (!username_is_valid.hasMatch() && !password_is_valid.hasMatch())
+        QMessageBox::warning(this, "Invalid username and password", "Your username:\n  - may include letters, numbers, underscore or hyphen.\n  - needs to include 5 to 10 characters.\n\nYour password must :\n  - include at least one letter, number and symbol.\n  - be at least 8 characters long.");
+    else if (!username_is_valid.hasMatch())
+        QMessageBox::warning(this, "Invalid username", "Your username:\n  - may include letters, numbers, underscore or hyphen.\n  - needs to include 5 to 10 characters.");
+    else if (!password_is_valid.hasMatch())
+        QMessageBox::warning(this, "Invalid password", "Your password must:\n  - include at least one letter, number and symbol.\n  - be at least 8 characters long.");
+}
 }
 void signup::encrypt(QString &string_encrypt)
 {

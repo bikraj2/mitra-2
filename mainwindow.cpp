@@ -6,7 +6,7 @@
 #include<QFileInfo>
 #include<QtDebug>
 #include<iostream>
-
+QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,6 +48,8 @@ void MainWindow::on_pushButton_login_3_clicked()
         {
             hide();
             firstwindow = new Dialog1(this);
+            ui->username_3->setText("");
+            ui->Password_3->setText("");
             firstwindow->show();
         }
     }
@@ -78,6 +80,11 @@ void MainWindow:: db_conn_open()
             qDebug() << "hey sorry";
         }
 
+}
+void MainWindow:: db_conn_close()
+{
+info.close();
+QSqlDatabase info  =  QSqlDatabase::addDatabase("QSQLITE");
 }
 bool MainWindow :: setTable()
 {
