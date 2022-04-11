@@ -1,4 +1,4 @@
-    QT       += core gui sql
+    QT       += core gui sql multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,6 +15,7 @@ SOURCES += \
     forgotpassword.cpp \
     main.cpp \
     mainwindow.cpp \
+    music.cpp \
     notes.cpp \
     signup.cpp\
     taskadder.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     dialog2.h \
     forgotpassword.h \
     mainwindow.h \
+    music.h \
     notes.h \
     signup.h\
     taskadder.h \
@@ -37,6 +39,7 @@ FORMS += \
     dialog2.ui \
     forgotpassword.ui \
     mainwindow.ui \
+    music.ui \
     notes.ui \
     signup.ui\
     taskadder.ui \

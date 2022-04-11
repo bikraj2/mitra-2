@@ -43,3 +43,11 @@ void Dialog1::on_pushButton_2_clicked()
     noteMaking->show();
 }
 
+
+void Dialog1::on_pushButton_clicked()
+{
+    hide();
+    studyMusic  = new music(this);
+    studyMusic->show();
+}
+
