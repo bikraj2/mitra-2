@@ -35,3 +35,4 @@ void Dialog1::on_logouticon_clicked()
     parent->show();
 }
 
+

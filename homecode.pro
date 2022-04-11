@@ -16,6 +16,7 @@ SOURCES += \
     mainwindow.cpp \
     notes.cpp \
     signup.cpp\
+    syllabus.cpp \
     taskadder.cpp \
     todo.cpp
 
@@ -26,6 +27,7 @@ HEADERS += \
     mainwindow.h \
     notes.h \
     signup.h\
+    syllabus.h \
     taskadder.h \
     todo.h
 
@@ -36,6 +38,7 @@ FORMS += \
     mainwindow.ui \
     notes.ui \
     signup.ui\
+    syllabus.ui \
     taskadder.ui \
     todo.ui
 
